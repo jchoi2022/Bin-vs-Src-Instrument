@@ -7,7 +7,7 @@ RUN sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list && \
       wget apt-transport-https sudo vim git unzip xz-utils time flex \
       build-essential autoconf automake bison libtool libtool-bin gdb texinfo \
       libglib2.0-dev \
-      clang-6.0
+      clang-4.0
 
 # Create a user and switch.
 RUN useradd -ms /bin/bash tester && \
