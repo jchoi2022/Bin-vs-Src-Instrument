@@ -2,7 +2,7 @@ import os, sys
 
 if len(sys.argv) != 4:
     instruments = "<native|afl-gcc|afl-clang>"
-    targets = "<nm-new|objdump|size|readelf>"
+    targets = "<nm-new|size|readelf>"
     print("Usage: python %s <time> %s %s" % (sys.argv[0], instruments, targets))
     exit(1)
 
@@ -14,7 +14,7 @@ if inst not in ["native", "afl-gcc", "afl-clang"]:
     print("Invalid instrumentation method: %s" % inst)
     exit(1)
 
-if targ not in ["nm-new", "objdump", "size", "readelf"]:
+if targ not in ["nm-new", "size", "readelf"]:
     print("Invalid target: %s" % targ)
     exit(1)
 
